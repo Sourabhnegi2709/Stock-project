@@ -14,7 +14,7 @@ const cookieParser = require("cookie-parser");
 const { HoldingsModel } = require("./models/HoldingsModel.js");
 const { PositionsModel } = require("./models/PositionsModel.js");
 const { OrdersModel } = require("./models/OrdersModel.js");
-const UserModel = require("./schema/UserSchema");
+const { UserModel } = require("./models/UserModel");
 
 const port = process.env.PORT || 3001;
 const uri = process.env.MONGO_URL
