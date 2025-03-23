@@ -5,6 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 5050,  // Set a fixed port
+    port: "https://stock-dashbord.netlify.app/",  // Set a fixed port
   },
 })

@@ -29,7 +29,7 @@ const Menu = () => {
     localStorage.removeItem("token");
 
     // Redirect to Login Page
-    window.location.href = "http://localhost:5174/signup";
+    window.location.href = "https://shiny-yeot-e4ffd0.netlify.app/signup";
 };
 
     return (
