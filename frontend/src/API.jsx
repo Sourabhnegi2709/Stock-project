@@ -24,7 +24,7 @@ export const loginUser = async (userData) => {
     if (response.ok) {
         localStorage.setItem("token", data.token); // Save JWT token
         localStorage.setItem("user", JSON.stringify(data.user)); // Save user info
-        window.location.href = "http://localhost:5174"; // Redirect to Dashboard (Change port if needed)
+        window.location.href = "https://stock-dashbord.netlify.app/"; // Redirect to Dashboard (Change port if needed)
     }
 
     return data;

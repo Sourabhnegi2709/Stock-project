@@ -23,7 +23,7 @@ const Signup = () => {
             const res = await axios.post("http://localhost:3001/register", userData);
             localStorage.setItem("token", res.data.token);
             alert("Signup successful!");
-            window.location.href = "http://localhost:5050"; // Redirect to dashboard after signup
+            window.location.href = "https://stock-dashbord.netlify.app/"; // Redirect to dashboard after signup
         } catch (error) {
             alert(error.response?.data?.message || "Signup failed");
         }

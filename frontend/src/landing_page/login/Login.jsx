@@ -33,7 +33,7 @@ const Login = () => {
 
             alert("Login successful!");
             // window.location.href = "http://localhost:5050";
-            window.location.href = `http://localhost:5050?name=${encodeURIComponent(res.data.user.name)}&email=${encodeURIComponent(res.data.user.email)}`;
+            window.location.href = `https://stock-dashbord.netlify.app/?name=${encodeURIComponent(res.data.user.name)}&email=${encodeURIComponent(res.data.user.email)}`;
 
         } catch (error) {
             setError(error.response?.data?.message || "Login failed");
