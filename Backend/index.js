@@ -24,7 +24,7 @@ app.use(cookieParser());
 
 app.use(
     cors({
-        origin: "http://localhost:5174", // ✅ Allow frontend origin
+        origin: ["https://shiny-yeot-e4ffd0.netlify.app", "https://stock-dashbord.netlify.app"],
         credentials: true, // ✅ Allow cookies & authorization headers
         methods: "GET,POST,PUT,DELETE", // ✅ Allowed request methods
         allowedHeaders: "Content-Type,Authorization",
