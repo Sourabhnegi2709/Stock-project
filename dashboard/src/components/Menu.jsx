@@ -28,16 +28,14 @@ const Menu = () => {
         } catch (err) {
             console.error("Logout failed:", err);
         }
-
+    
         localStorage.removeItem("user");
         localStorage.removeItem("token");
-
-        // Optional: toast message (if using any toast library)
-        // toast.success("Logged out successfully");
-
-        navigate("/signup"); // Use react-router for redirect
+    
+        // Redirect to Netlify signup page
+        window.location.href = "https://shiny-yeot-e4ffd0.netlify.app/signup";
     };
-
+    
     const isActive = (route) => {
         return location.pathname === `/${route.toLowerCase()}`;
     };
