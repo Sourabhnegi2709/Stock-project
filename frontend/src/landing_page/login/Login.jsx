@@ -21,7 +21,7 @@ const Login = () => {
         setError(null); // Clear previous errors
 
         try {
-            const res = await axios.post("http://localhost:3001/login", userData, {
+            const res = await axios.post("https://stock-project-ry3n.onrender.com/login", userData, {
                 withCredentials: true, // ✅ Send cookies with request
                 
             });
