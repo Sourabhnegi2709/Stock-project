@@ -90,6 +90,15 @@ app.post("/login", async (req, res) => {
 });
 
 
+app.post("/logout", (req, res) => {
+    res.clearCookie("token", {
+        httpOnly: true,
+        sameSite: "Strict",
+        secure: process.env.NODE_ENV === "production"
+    });
+    res.status(200).json({ message: "Logged out" });
+});
+
 app.get("/allHoldings", auth, async (req, res) => {
     let allHoldings = await HoldingsModel.find({});
     res.json(allHoldings);
