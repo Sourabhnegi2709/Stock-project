@@ -20,7 +20,7 @@ const Signup = () => {
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:3001/register", userData);
+            const res = await axios.post("https://stock-project-ry3n.onrender.com/register", userData);
             localStorage.setItem("token", res.data.token);
             alert("Signup successful!");
             window.location.href = "https://stock-dashbord.netlify.app/"; // Redirect to dashboard after signup
