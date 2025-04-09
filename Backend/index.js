@@ -96,7 +96,9 @@ app.post("/logout", (req, res) => {
         sameSite: "Strict",
         secure: process.env.NODE_ENV === "production"
     });
-    res.status(200).json({ message: "Logged out" });
+
+    // 🔁 Redirect to frontend signup page after clearing cookie
+    return res.redirect("https://shiny-yeot-e4ffd0.netlify.app/signup");
 });
 
 app.get("/allHoldings", auth, async (req, res) => {
