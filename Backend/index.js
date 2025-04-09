@@ -24,7 +24,10 @@ app.use(cookieParser());
 
 app.use(
     cors({
-        origin: ["https://shiny-yeot-e4ffd0.netlify.app", "https://stock-dashbord.netlify.app"],
+        origin: [
+            "https://shiny-yeot-e4ffd0.netlify.app", // frontend
+            "https://stock-dashbord.netlify.app"     // dashboard
+        ],
         credentials: true, // ✅ Allow cookies & authorization headers
         methods: "GET,POST,PUT,DELETE", // ✅ Allowed request methods
         allowedHeaders: "Content-Type,Authorization",
